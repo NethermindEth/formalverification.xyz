@@ -11,9 +11,9 @@ import SatoshiRazor from './pages/SatoshiRazor';
 
 const App = () => (
   <BrowserRouter>
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Header />
-      <main className="flex-grow bg-gray-50">
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/firm/:id" element={<FirmPage />} />

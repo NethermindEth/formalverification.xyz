@@ -67,6 +67,9 @@ export const HomePage = () => {
                 <img src={`firm_assets/${firm.svg}`} alt={firm.name} className="w-12 h-12 mr-4" />
                 <h3 className="text-xl font-semibold">{firm.name}</h3>
               </div>
+              <div className="px-5 py-3 border-t border-gray-200">
+                <p className="text-sm text-gray-600 line-clamp-2">{firm.description}</p>
+              </div>
               <div className="px-5 pb-5">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {firm.specialties.map(specialty => (

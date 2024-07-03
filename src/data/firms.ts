@@ -8,7 +8,8 @@ export const firms = [
       "stacks": ["Ethereum", "Binance Smart Chain", "Solana"],
       "domains": ["DeFi", "NFTs", "Layer 2 Solutions", "Cross-chain Protocols"],
       "fv_language": ["Coq", "SMT Solvers (Z3, CVC4)"],
-      "svg": "certik.svg"
+      "svg": "certik.svg",
+      "link": "https://www.certik.com/"
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@ export const firms = [
       "stacks": ["Ethereum"],
       "domains": ["DeFi", "DApps", "Layer 2 Solutions"],
       "fv_language": ["Hoare Logic"],
-      "svg": "consensys.svg"
+      "svg": "consensys.svg",
+      "link": "https://consensys.net/diligence/"
     },
     {
       "id": 3,
@@ -30,7 +32,8 @@ export const firms = [
       "stacks": ["Ethereum", "Tezos", "Algorand"],
       "domains": ["Smart Contracts", "NFTs", "Blockchain Protocols"],
       "fv_language": ["K Framework", "Coq"],
-      "svg": "runtime.svg"
+      "svg": "runtime.svg",
+      "link": "https://runtimeverification.com/"
     },
     {
       "id": 4,
@@ -41,7 +44,8 @@ export const firms = [
       "stacks": ["Ethereum", "Solana", "StarkNet"],
       "domains": ["DeFi", "Zero-Knowledge Proofs", "Cross-chain Protocols"],
       "fv_language": ["Coq", "Z3"],
-      "svg": "veridise.svg"
+      "svg": "veridise.svg",
+      "link": "https://www.veridise.com/"
     },
     {
       "id": 5,
@@ -52,7 +56,8 @@ export const firms = [
       "stacks": ["Ethereum", "Binance Smart Chain"],
       "domains": ["DeFi", "NFTs"],
       "fv_language": ["Coq", "TLA+"],
-      "svg": "cyberscope.svg"
+      "svg": "cyberscope.svg",
+      "link": "https://www.cyberscope.io/"
     },
     {
       "id": 6,
@@ -63,7 +68,8 @@ export const firms = [
       "stacks": ["Ethereum", "Polygon", "Algorand"],
       "domains": ["DeFi", "DApps"],
       "fv_language": ["Isabelle/HOL", "TLA+"],
-      "svg": "shellboxes.svg"
+      "svg": "shellboxes.svg",
+      "link": "https://www.shellboxes.com/"
     },
     {
       "id": 7,
@@ -74,6 +80,7 @@ export const firms = [
       "stacks": ["Ethereum", "StarkNet"],
       "domains": ["DeFi", "ZK Proofs"],
       "fv_language": ["Lean 4", "SMT Solvers (Z3, CVC5)"],
-      "svg": "nethermind.svg"
+      "svg": "nethermind.svg",
+      "link": "https://www.nethermind.io/formal-verification"
     }
   ];

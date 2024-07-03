@@ -19,7 +19,14 @@ export const FirmPage = () => {
       canonicalUrl={`${SITE_URL}/firm/${firm.id}`}
     >
       <div className="container mx-auto p-4">
-        <h2 className="text-3xl font-bold mb-6">{firm.name}</h2>
+        <div className="flex items-center mb-6">
+          <a href={firm.link} target="_blank" rel="noopener noreferrer">
+            <img src={`/firm_assets/${firm.svg}`} alt={`${firm.name} logo`} className="w-16 h-16 mr-4" />
+          </a>
+          <a href={firm.link} target="_blank" rel="noopener noreferrer" className="text-3xl font-bold hover:text-blue-600">
+            {firm.name}
+          </a>
+        </div>
         <p className="mb-6 text-lg">{firm.description}</p>
 
         <section className="mb-8">
@@ -54,7 +61,12 @@ export const FirmPage = () => {
           </ul>
         </section>
 
-        <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium">&larr; Back to Home</Link>
+        <div className="flex justify-between items-center">
+          <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium">&larr; Back to Home</Link>
+          <a href={firm.link} target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+            Visit {firm.name}
+          </a>
+        </div>
       </div>
     </SEOWrapper>
   );

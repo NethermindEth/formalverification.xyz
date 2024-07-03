@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const Header = () => (
-  <header className="bg-gray-800 text-white p-4">
+  <header className="bg-gray-800 text-white p-4 mb-9">
     <div className="container mx-auto flex justify-between items-center">
       <h1 className="text-2xl font-bold">Formal Verification in Crypto</h1>
       <nav>
