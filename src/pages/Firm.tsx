@@ -15,7 +15,7 @@ export const FirmPage = () => {
   return (
     <SEOWrapper
       title={`${firm.name} | Formal Verification Experts`}
-      description={`${firm.name} specializes in ${firm.specialties.join(', ')}. Explore their expertise in ${firm.domains.join(', ')} for blockchain and crypto projects.`}
+      description={`${firm.name} specializes in ${firm.specialties.join(', ')}. Explore their expertise in ${firm.specialties.join(', ')} for blockchain and crypto projects.`}
       canonicalUrl={`${SITE_URL}/firm/${firm.id}`}
     >
       <div className="container mx-auto p-4">
@@ -57,7 +57,7 @@ export const FirmPage = () => {
         <section className="mb-8">
           <h3 className="text-2xl font-semibold mb-4">Verification Domains</h3>
           <ul className="list-disc list-inside">
-            {firm.domains.map(domain => <li key={domain} className="mb-2">{domain}</li>)}
+            {firm.specialties.map(specialty => <li key={specialty} className="mb-2">{specialty}</li>)}
           </ul>
         </section>
 
