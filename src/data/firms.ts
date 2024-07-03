@@ -61,17 +61,6 @@ export enum Language {
 
 export const firms: Firm[] = [
     {
-      "id": 1,
-      "name": "CertiK",
-      "specialties": [Specialty.SmartContractVerification, Specialty.DeFiProtocolVerification],
-      "description": "CertiK provides comprehensive blockchain security services including formal verification, smart contract audits, and penetration testing. They are renowned for their rigorous audit processes and have secured assets worth billions of dollars.",
-      "languages": [Language.Solidity, Language.Vyper, Language.Move, Language.DeepSEA],
-      "stacks": [Stack.Ethereum, Stack.BinanceSmartChain, Stack.Solana],
-      "fv_language": [FVTools.Coq, FVTools.SMTSolvers],
-      "svg": "certik.svg",
-      "link": "https://www.certik.com/"
-    },
-    {
       "id": 2,
       "name": "ConsenSys Diligence",
       "specialties": [Specialty.SmartContractVerification, Specialty.DeFiProtocolVerification],
