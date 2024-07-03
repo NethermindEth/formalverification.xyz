@@ -19,6 +19,12 @@ export const FirmPage = () => {
       canonicalUrl={`${SITE_URL}/firm/${firm.id}`}
     >
       <div className="container mx-auto p-4">
+        <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-8" role="alert">
+          <p className="font-bold">Warning</p>
+          <p>The information on this page was generated using AI and AI-assisted search. They are not accurate and we are waiting for you to update your company's representation, there are inaccuracies and blatant mistakes in this data. We apologize for any errors.</p>
+          <p className="mt-2">You can review and update your company's information at: <a href="https://github.com/NethermindEth/formalverification.xyz/tree/master/src/data" className="underline" target="_blank" rel="noopener noreferrer">https://github.com/NethermindEth/formalverification.xyz/tree/master/src/data</a></p>
+          <p className="mt-2">Please note that this page is not widely circulated. It will be launched after these are all accurate and up to date.</p>
+        </div>
         <div className="flex items-center mb-6">
           <a href={firm.link} target="_blank" rel="noopener noreferrer">
             <img src={`/firm_assets/${firm.svg}`} alt={`${firm.name} logo`} className="w-16 h-16 mr-4" />
