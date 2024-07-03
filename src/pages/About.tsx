@@ -10,6 +10,10 @@ export const AboutPage = () => {
       canonicalUrl={`${SITE_URL}/about`}
     >
       <div className="container mx-auto p-4">
+        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-8" role="alert">
+          <p className="font-bold">Warning</p>
+          <p>This content is currently under heavy review as it was generated using AI. The information provided may not be entirely accurate or up-to-date. Please use this content as a starting point for further research and verification.</p>
+        </div>
         <h2 className="text-3xl font-bold mb-6">About Formal Verification in Crypto</h2>
         <p className="mb-8 text-lg">
           Formal verification is a rigorous mathematical approach to proving the correctness and security of software systems, including blockchain and smart contract applications. It involves using formal methods and tools to analyze and verify the behavior of a system against its specified requirements and properties.
