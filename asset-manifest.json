@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/crypto-fv-companies/static/css/main.7727b168.css",
+    "main.js": "/crypto-fv-companies/static/js/main.7da90208.js",
+    "static/js/453.25d6598a.chunk.js": "/crypto-fv-companies/static/js/453.25d6598a.chunk.js",
+    "index.html": "/crypto-fv-companies/index.html",
+    "main.7727b168.css.map": "/crypto-fv-companies/static/css/main.7727b168.css.map",
+    "main.7da90208.js.map": "/crypto-fv-companies/static/js/main.7da90208.js.map",
+    "453.25d6598a.chunk.js.map": "/crypto-fv-companies/static/js/453.25d6598a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7727b168.css",
+    "static/js/main.7da90208.js"
+  ]
+}
