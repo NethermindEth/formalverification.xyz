@@ -2,7 +2,7 @@ import React from 'react';
 import { SITE_URL } from '../constants';
 import { SEOWrapper } from '../components/SEOWrapper';
 
-export const AboutPage = () => {
+export const AboutPage:React.FC = () => {
   return (
     <SEOWrapper
       title="About Formal Verification in Crypto | Key Concepts and Techniques"

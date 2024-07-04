@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export const SEOWrapper = ({ title, description, canonicalUrl, children }: { title: string, description: string, canonicalUrl: string, children: React.ReactNode }) => (
+type ISEOWrapper = { title: string, description: string, canonicalUrl: string, children: React.ReactNode }
+
+export const SEOWrapper:React.FC<ISEOWrapper> = ({ title, description, canonicalUrl, children }) => (
     <>
       <Helmet>
         <title>{title}</title>
