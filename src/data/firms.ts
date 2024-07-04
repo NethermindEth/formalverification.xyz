@@ -17,7 +17,8 @@ export enum Stack {
   Tezos = "Tezos",
   Algorand = "Algorand",
   Polygon = "Polygon",
-  Starknet = "Starknet"
+  Starknet = "Starknet",
+  AlephZero = "Aleph Zero"
 }
 
 export enum FVTools {
@@ -129,11 +130,11 @@ export const firms: Firm[] = [
     {
       "id": 8,
       "name": "Formal Land",
-      "specialties": [Specialty.SmartContractVerification, Specialty.CryptographicPrimitiveVerification],
+      "specialties": [Specialty.SmartContractVerification, Specialty.ConsensusProtocolVerification],
       "description": "Formal Land offers advanced formal verification services, specializing in translating code from languages like Rust, OCaml, Solidity, and TypeScript to the Coq proof system. They are known for their rigorous methods and innovative tools, ensuring the highest level of software security.",
       "languages": [Language.Solidity, Language.Rust, Language.OCaml, Language.TypeScript],
-      "stacks": [Stack.Ethereum, Stack.Tezos],
-      "fv_language": [FVTools.Coq, FVTools.Z3],
+      "stacks": [Stack.Ethereum, Stack.AlephZero, Stack.Tezos],
+      "fv_language": [FVTools.Coq],
       "svg": "formalland.svg",
       "link": "https://formal.land/"
     }
