@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Footer = () => (
+export const Footer: React.FC = () => (
   <footer className="bg-gray-800 text-white p-4 mt-8">
     <div className="container mx-auto text-center">
       <p>Powered by Nethermind</p>
