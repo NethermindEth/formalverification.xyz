@@ -63,7 +63,7 @@ export const HomePage = () => {
         <p className="mb-8 text-lg">Discover firms specializing in blockchain and cryptocurrency technologies.</p>
 
         <p className="mb-8 text-lg">
-          <a href="/about" className="text-blue-600 hover:underline">Why formal verification?</a> Formal verification provides a higher level of assurance compared to traditional auditing and testing methods by using mathematical proofs to demonstrate the correctness and security of software systems under all possible conditions.
+          <Link to="/about" className="text-blue-600 hover:underline">Why formal verification?</Link> Formal verification provides a higher level of assurance compared to traditional auditing and testing methods by using mathematical proofs to demonstrate the correctness and security of software systems under all possible conditions.
         </p>
         <div className="mb-8 flex gap-4">
           <select id="specialty" value={selectedSpecialty} onChange={e => setSelectedSpecialty(e.target.value as Specialty | "")} className="w-1/3 p-2 border rounded">
