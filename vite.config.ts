@@ -11,6 +11,9 @@ export default defineConfig({
         main: path.join(__dirname, "index.html"),
         404: path.join(__dirname, "public/404.html"),
       },
+      output: {
+        dir: "build"
+      }
     },
   },
 });
