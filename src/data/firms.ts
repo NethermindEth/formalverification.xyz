@@ -30,8 +30,10 @@ export enum FVTools {
   TLAPlus = "TLA+",
   IsabelleHOL = "Isabelle/HOL",
   Lean4 = "Lean 4",
-  CVC5 = "CVC5"
+  CVC5 = "CVC5",
+  EasyCrypt = "EasyCrypt"
 }
+
 export enum Specialty {
   SmartContractVerification = "Smart Contract Verification",
   ZKCircuitVerification = "Zero-Knowledge Circuit Verification",
@@ -119,8 +121,8 @@ export const firms: Firm[] = [
     {
       "id": 7,
       "name": "Nethermind",
-      "specialties": [Specialty.SmartContractVerification, Specialty.ZKCircuitVerification],
-      "description": "Nethermind offers formal verification services for EVM and StarkNet smart contracts, utilizing tools like Horus to ensure the correctness and security of blockchain applications.",
+      "specialties": [Specialty.SmartContractVerification, Specialty.ZKCircuitVerification, Speciality.CryptographicPrimitiveVerification, Speciality.ConsensusProtocolVerification],
+      "description": "Nethermind specializes in hard formal methods, leveraging the interactive theorem provers such as Lean4 and EasyCrypt to verify the most complex software in the web3 ecosystem. They focus particularly in the fields of smart-contract, zk-circuit, cryptographic protocol and distributed protocol verification.",
       "languages": [Language.Solidity, Language.Cairo],
       "stacks": [Stack.Ethereum, Stack.Starknet],
       "fv_language": [FVTools.Lean4, FVTools.SMTSolvers],
