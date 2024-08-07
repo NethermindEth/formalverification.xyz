@@ -1,11 +1,11 @@
 import React from 'react';
-import { firms, Stack, FVTools, Specialty } from '../data/firms';
+import { firms, Stack, FVTools, Speciality } from '../data/firms';
 import { SITE_URL } from '../constants';
 import { SEOWrapper } from '../components/SEOWrapper';
 import { Link } from 'react-router-dom';
 
 export const HomePage = () => {
-  const [selectedSpecialty, setSelectedSpecialty] = React.useState<Specialty | "">("");
+  const [selectedSpecialty, setSelectedSpecialty] = React.useState<Speciality | "">("");
   const [selectedFvTools, setSelectedFvTools] = React.useState<FVTools | "">("");
   const [selectedStack, setSelectedStack] = React.useState<Stack | "">("");
   const specialties = Array.from(new Set(firms.flatMap(firm => firm.specialties)));
@@ -41,7 +41,7 @@ export const HomePage = () => {
     e.stopPropagation();
     switch (type) {
       case 'specialty':
-        setSelectedSpecialty(prevState => prevState === value ? "" : value as Specialty);
+        setSelectedSpecialty(prevState => prevState === value ? "" : value as Speciality);
         break;
       case 'fvTool':
         setSelectedFvTools(prevState => prevState === value ? "" : value as FVTools);
@@ -66,7 +66,7 @@ export const HomePage = () => {
           <Link to="/about" className="text-blue-600 hover:underline">Why formal verification?</Link> Formal verification provides a higher level of assurance compared to traditional auditing and testing methods by using mathematical proofs to demonstrate the correctness and security of software systems under all possible conditions.
         </p>
         <div className="mb-8 flex gap-4">
-          <select id="specialty" value={selectedSpecialty} onChange={e => setSelectedSpecialty(e.target.value as Specialty | "")} className="w-1/3 p-2 border rounded">
+          <select id="specialty" value={selectedSpecialty} onChange={e => setSelectedSpecialty(e.target.value as Speciality | "")} className="w-1/3 p-2 border rounded">
             <option value="">All Specialties</option>
             {specialties.map(specialty => (
               <option key={specialty} value={specialty}>{specialty}</option>

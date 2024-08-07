@@ -2,7 +2,7 @@ export type Firm = {
   id: number;
   name: string;
   description: string;
-  specialties: Specialty[];
+  specialties: Speciality[];
   fv_language: FVTools[];
   stacks: Stack[];
   languages: Language[];
@@ -34,7 +34,7 @@ export enum FVTools {
   EasyCrypt = "EasyCrypt"
 }
 
-export enum Specialty {
+export enum Speciality {
   SmartContractVerification = "Smart Contract Verification",
   ZKCircuitVerification = "Zero-Knowledge Circuit Verification",
   ConsensusProtocolVerification = "Consensus Protocol Verification",
@@ -66,7 +66,7 @@ export const firms: Firm[] = [
     {
       "id": 2,
       "name": "ConsenSys Diligence",
-      "specialties": [Specialty.SmartContractVerification, Specialty.DeFiProtocolVerification],
+      "specialties": [Speciality.SmartContractVerification, Speciality.DeFiProtocolVerification],
       "description": "As part of ConsenSys, Diligence offers advanced security services for Ethereum-based projects, including manual audits and automated analysis with tools like MythX.",
       "languages": [Language.Solidity],
       "stacks": [Stack.Ethereum],
@@ -77,7 +77,7 @@ export const firms: Firm[] = [
     {
       "id": 3,
       "name": "Runtime Verification",
-      "specialties": [Specialty.SmartContractVerification, Specialty.VirtualMachineVerification],
+      "specialties": [Speciality.SmartContractVerification, Speciality.VirtualMachineVerification],
       "description": "Focused on runtime verification techniques, they provide thorough smart contract verification, analysis, and advisory services for blockchain technologies.",
       "languages": [Language.Solidity, Language.Vyper, Language.Haskell],
       "stacks": [Stack.Ethereum, Stack.Tezos, Stack.Algorand],
@@ -88,7 +88,7 @@ export const firms: Firm[] = [
     {
       "id": 4,
       "name": "Veridise",
-      "specialties": [Specialty.ZKCircuitVerification, Specialty.SmartContractVerification],
+      "specialties": [Speciality.ZKCircuitVerification, Speciality.SmartContractVerification],
       "description": "Veridise is known for its rigorous security audits and formal verification of blockchain systems, leveraging state-of-the-art research tools.",
       "languages": [Language.Solidity, Language.Rust, Language.Cairo],
       "stacks": [Stack.Ethereum, Stack.Solana, Stack.Starknet],
@@ -99,7 +99,7 @@ export const firms: Firm[] = [
     {
       "id": 5,
       "name": "Cyberscope",
-      "specialties": [Specialty.SmartContractVerification, Specialty.DeFiProtocolVerification],
+      "specialties": [Speciality.SmartContractVerification, Speciality.DeFiProtocolVerification],
       "description": "Cyberscope specializes in formal verification, offering tailored solutions for smart contract projects, ensuring rigorous mathematical proof of correctness and security.",
       "languages": [Language.Solidity, Language.Vyper],
       "stacks": [Stack.Ethereum, Stack.BinanceSmartChain],
@@ -110,7 +110,7 @@ export const firms: Firm[] = [
     {
       "id": 6,
       "name": "ShellBoxes",
-      "specialties": [Specialty.SmartContractVerification, Specialty.CryptographicPrimitiveVerification],
+      "specialties": [Speciality.SmartContractVerification, Speciality.CryptographicPrimitiveVerification],
       "description": "ShellBoxes offers comprehensive formal verification and security audits for various blockchain ecosystems, providing detailed reports and mitigation strategies.",
       "languages": [Language.Solidity, Language.Rust, Language.PyTeal],
       "stacks": [Stack.Ethereum, Stack.Polygon, Stack.Algorand],
@@ -121,7 +121,7 @@ export const firms: Firm[] = [
     {
       "id": 7,
       "name": "Nethermind",
-      "specialties": [Specialty.SmartContractVerification, Specialty.ZKCircuitVerification, Speciality.CryptographicPrimitiveVerification, Speciality.ConsensusProtocolVerification],
+      "specialties": [Speciality.SmartContractVerification, Speciality.ZKCircuitVerification, Speciality.CryptographicPrimitiveVerification, Speciality.ConsensusProtocolVerification],
       "description": "Nethermind specializes in hard formal methods, leveraging the interactive theorem provers such as Lean4 and EasyCrypt to verify the most complex software in the web3 ecosystem. They focus particularly in the fields of smart-contract, zk-circuit, cryptographic protocol and distributed protocol verification.",
       "languages": [Language.Solidity, Language.Cairo],
       "stacks": [Stack.Ethereum, Stack.Starknet],
@@ -132,7 +132,7 @@ export const firms: Firm[] = [
     {
       "id": 8,
       "name": "Formal Land",
-      "specialties": [Specialty.SmartContractVerification, Specialty.ConsensusProtocolVerification],
+      "specialties": [Speciality.SmartContractVerification, Speciality.ConsensusProtocolVerification],
       "description": "Formal Land offers advanced formal verification services, specializing in translating code from languages like Rust, OCaml, Solidity, and TypeScript to the Coq proof system. They are known for their rigorous methods and innovative tools, ensuring the highest level of software security.",
       "languages": [Language.Solidity, Language.Rust, Language.OCaml, Language.TypeScript],
       "stacks": [Stack.Ethereum, Stack.AlephZero, Stack.Tezos],
