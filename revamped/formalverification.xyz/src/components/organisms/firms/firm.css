@@ -1,8 +1,12 @@
 .firm-root {
-	padding: 1rem 0rem;
-	box-shadow: var(--shadow6);
+	padding-top: 1rem;
+	box-shadow: var(--shadow-3);
+	background: var(--accent-contrast);
+	border-radius: var(--radius-6);
+	overflow: hidden;
 }
 
 .firm-details-root {
 	transition: all 0.3s ease;
+	background: #FBFCFF;
 }

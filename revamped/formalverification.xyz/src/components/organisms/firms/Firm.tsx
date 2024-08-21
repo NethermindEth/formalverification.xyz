@@ -18,11 +18,11 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 	const [isOpen, setIsOpen] = useState(true)
 	return (
 		<Box className='firm-root'>
-			<Grid columns={"60px 1fr 100px"} px={"4"}>
+			<Grid columns={"60px 1fr 100px"} px={"4"} py={"4"}>
 				<Flex>
-					<Avatar variant='soft' size={"3"} radius='full' src={`firms_logos/${firm.png}`} fallback={"F"} />
+					<Avatar variant='soft' size={"4"} radius='full' src={`firms_logos/${firm.png}`} fallback={"F"} />
 				</Flex>
-				<Flex direction="column">
+				<Flex direction="column" gap={"2"}>
 					<Flex gap={"3"} align={"center"}>
 						<Heading size={"4"}>{firm.name}</Heading>
 						<Button variant={'outline'} size={"1"} radius='large'>
@@ -44,63 +44,71 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 					</Button>
 				</Flex>
 			</Grid>
-			<Grid 
-				columns={"1fr 1fr"} 
+			{ isOpen && <Separator size={"4"} /> }
+			<Flex
+				direction={"column"} 
 				className='firm-details-root' 
 				style={{ 
 					opacity: isOpen ? 1 : 0,
-					display: isOpen ? 'grid' : 'none'
+					display: isOpen ? 'flex' : 'none'
 				}}
 				>
-				<Flex direction={"column"} gap={"3"} p={"4"}>
-					<Flex align={"center"} gap={"2"}>
-						<MdElectricBolt />
-						<Text size={"2"} style={{letterSpacing: "1px"}}>SPECIALITIES</Text>
+				<Grid width={"100%"} columns={"1fr 1px 1fr"}>
+					<Flex direction={"column"} gap={"3"} p={"4"}>
+						<Flex align={"center"} gap={"2"}>
+							<MdElectricBolt />
+							<Text size={"2"} style={{letterSpacing: "1px"}}>SPECIALITIES</Text>
+						</Flex>
+						<Flex gap={"2"} wrap={"wrap"}>
+							{firm.specialties.map((speciality, idx) => {
+								return <Badge size={"3"} color='sky' key={`${idx}-${speciality}`}>
+									{speciality}
+								</Badge>
+						})}</Flex>
 					</Flex>
-					<Flex gap={"2"} wrap={"wrap"}>
-						{firm.specialties.map((speciality, idx) => {
-							return <Badge size={"3"} color='sky' key={`${idx}-${speciality}`}>
-								{speciality}
-							</Badge>
-					})}</Flex>
-				</Flex>
-				<Flex direction={"column"} gap={"3"} p={"4"}>
-					<Flex align={"center"} gap={"2"}>
-						<IoShieldSharp />
-						<Text size={"2"} style={{letterSpacing: "1px"}}>FORMAL VERIFICATION TOOLS</Text>
+					<Separator size={"4"} orientation={"vertical"} />
+					<Flex direction={"column"} gap={"3"} p={"4"}>
+						<Flex align={"center"} gap={"2"}>
+							<IoShieldSharp />
+							<Text size={"2"} style={{letterSpacing: "1px"}}>FORMAL VERIFICATION TOOLS</Text>
+						</Flex>
+						<Flex gap={"2"} wrap={"wrap"}>
+						{firm.fv_language.map((fv, idx) => {
+								return <Badge size={"3"} color='green' key={`${idx}-${fv}`}>
+									{fv}
+								</Badge>
+						})}</Flex>
 					</Flex>
-					<Flex gap={"2"} wrap={"wrap"}>
-					{firm.fv_language.map((fv, idx) => {
-							return <Badge size={"3"} color='green' key={`${idx}-${fv}`}>
-								{fv}
-							</Badge>
-					})}</Flex>
-				</Flex>
-				<Flex direction={"column"} gap={"3"} p={"4"}>
-					<Flex align={"center"} gap={"2"}>
-						<BsStack />
-						<Text size={"2"} style={{letterSpacing: "1px"}}>STACKS</Text>
+				</Grid>
+				<Separator size={"4"} />
+				<Grid width={"100%"} columns={"1fr 1px 1fr"}>
+					<Flex direction={"column"} gap={"3"} p={"4"}>
+						<Flex align={"center"} gap={"2"}>
+							<BsStack />
+							<Text size={"2"} style={{letterSpacing: "1px"}}>STACKS</Text>
+						</Flex>
+						<Flex gap={"2"} wrap={"wrap"}>
+							{firm.stacks.map((stack, idx) => {
+								return <Badge size={"3"} color='purple' key={`${idx}-${stack}`}>
+									{stack}
+								</Badge>
+						})}</Flex>
 					</Flex>
-					<Flex gap={"2"} wrap={"wrap"}>
-						{firm.stacks.map((stack, idx) => {
-							return <Badge size={"3"} color='purple' key={`${idx}-${stack}`}>
-								{stack}
-							</Badge>
-					})}</Flex>
-				</Flex>
-				<Flex direction={"column"} gap={"3"} p={"4"}>
-					<Flex align={"center"} gap={"2"}>
-						<HiCodeBracketSquare />
-						<Text size={"2"} style={{letterSpacing: "1px"}}>LANGUAGES</Text>
+					<Separator size={"4"} orientation={"vertical"} />
+					<Flex direction={"column"} gap={"3"} p={"4"}>
+						<Flex align={"center"} gap={"2"}>
+							<HiCodeBracketSquare />
+							<Text size={"2"} style={{letterSpacing: "1px"}}>LANGUAGES</Text>
+						</Flex>
+						<Flex gap={"2"} wrap={"wrap"}>
+							{firm.languages.map((language, idx) => {
+								return <Badge size={"3"} color='sky' key={`${idx}-${language}`}>
+									{language}
+								</Badge>
+						})}</Flex>
 					</Flex>
-					<Flex gap={"2"} wrap={"wrap"}>
-						{firm.languages.map((language, idx) => {
-							return <Badge size={"3"} color='sky' key={`${idx}-${language}`}>
-								{language}
-							</Badge>
-					})}</Flex>
-				</Flex>
-			</Grid>
+				</Grid>
+			</Flex>
 		</Box>
 	)
 }

@@ -16,16 +16,17 @@ const Firms = () => {
 	const filteredFirms = useMemo(() => {
 		return firms
 		}, [])
+
 	return (
-		<Flex direction={"column"} gap={"4"}>	
+		<Flex direction={"column"} gap={"4"} pb={"9"}>	
 			<Heading size={"6"} align={"center"}>Choose the firm that meets your needs!</Heading>
 			<Flex justify={"between"} align={"stretch"}>
 				<Menu options={specialities} label='Specialities' />
 				<Menu options={formalVerification} label='Formal Verification Tools' />
-			<Menu options={stacks} label='Stacks' />
+				<Menu options={stacks} label='Stacks' />
 				<Menu options={languages} label='Languages' />
 			</Flex>
-			<Flex py={"4"} gap={"3"} direction={"column"}>
+			<Flex py={"4"} gap={"5"} direction={"column"}>
 				<Flex px={"4"}>
 					<Text>{4} FIRMS FOUND</Text>
 				</Flex>

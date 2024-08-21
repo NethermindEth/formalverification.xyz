@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { act, useEffect, useRef, useState } from 'react'
 
 import { Button, DropdownMenu, Flex, Heading, Text } from '@radix-ui/themes'
 
@@ -24,7 +24,7 @@ const Menu: React.FC<IMenu> = ({
 
   const options =  ["All", ...menuOptions]
 
-  const [active, setActive] = useState([options[0] ?? "-"])
+  const [active, setActive] = useState(options)
 
   const getOptionText = (option: string) => {
     switch(option) {
@@ -44,14 +44,10 @@ const Menu: React.FC<IMenu> = ({
   }
 
   const getActiveLength = (active: string[]) => {
-    if(active && active.length === 1) {
-      if(active[0] === "All") {
-	return options.length
-      } else {
-	return active.length
-      }
+    if(active.includes("All")) {
+      return active.length - 1
     } else {
-      return active?.length
+      return active.length
     }
   }
 
@@ -60,16 +56,20 @@ const Menu: React.FC<IMenu> = ({
       let newActive = active.filter(a => a !== "All")
       if (newActive.includes(option)) {
 	newActive = newActive.filter(a => a !== option);	
-	if(newActive.length === 0) {
-	  setActive(["All"])
+	setActive([...newActive])
       } else {
-	  setActive([...newActive])
+	newActive.push(option)
+	if(newActive.length === options.length - 1) {
+	  newActive.push("All")
 	}
-      } else {
-	setActive([...newActive, option])
+	setActive([...newActive])
       }
     } else {
-      setActive(["All"])
+      if(active.includes("All")) {
+	setActive([])
+      } else {
+	setActive([...options])
+      }
     }
   }
 
@@ -110,20 +110,23 @@ const Menu: React.FC<IMenu> = ({
 		className='menu-trigger-button-text' 
 		style={{ maxWidth: `${textWidth - 120}px` }}
 	      >
-		{active.join(", ")}
+		{active.includes("All") ? "All" : active.join(", ")}
 	      </Text>
-	      <Text>({getActiveLength(active)})</Text>
+	      { getActiveLength(active) > 0 ? <Text>({getActiveLength(active)})</Text> : <Text>-</Text> }
 	    </Flex>
 	    <DropdownMenu.TriggerIcon />
 	  </Button>
 	</Flex>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content aria-multiselectable >
+      <DropdownMenu.Content aria-multiselectable>
 	{
 	  options.map((option, idx) => {
 	    return <DropdownMenu.Item
 	      key={`${option}:${idx}`} 
-	      onClick={() => handleDropdownSelection(option)}
+	      onSelect={(e) => {
+		e.preventDefault()
+		handleDropdownSelection(option)
+	      }}
 	      >
 	      {active.includes(option) || active.includes("All") ? <ImCheckboxChecked size={"16"} /> : <ImCheckboxUnchecked size={"16"} />}
 	      {getOptionText(option)}
