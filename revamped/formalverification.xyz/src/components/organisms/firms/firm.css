@@ -1,0 +1,8 @@
+.firm-root {
+	padding: 1rem 0rem;
+	box-shadow: var(--shadow6);
+}
+
+.firm-details-root {
+	transition: all 0.3s ease;
+}

@@ -1,0 +1,17 @@
+.tabButton-root {
+	height: auto;
+}
+
+.tabButton-root:hover {
+	cursor: pointer;
+}
+
+.tabButton-text {
+	display: block;
+	padding: 50px 20px;
+}
+
+.tabButton-separator {
+	transition: all 0.3s ease;
+	height: 2px !important;
+}
