@@ -1,6 +1,6 @@
-import React, { act, useEffect, useRef, useState } from 'react'
+import React, { Dispatch, useEffect, useRef, useState } from 'react'
 
-import { Button, DropdownMenu, Flex, Heading, Text } from '@radix-ui/themes'
+import { Button, DropdownMenu, Flex, Text } from '@radix-ui/themes'
 
 import "./menu.css"
 
@@ -11,15 +11,20 @@ import { HiCodeBracketSquare } from "react-icons/hi2";
 import { MdKeyboardOptionKey } from "react-icons/md";
 
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
+import { Action } from './Firms';
 
 type IMenu = {
   label: string,
-  options: string[]
+  options: string[],
+  actionType: Action['type'],
+  dispatcher: Dispatch<Action>
 }
 
 const Menu: React.FC<IMenu> = ({
   label,
-  options: menuOptions
+  options: menuOptions,
+  actionType,
+  dispatcher
 }) => {
 
   const options =  ["All", ...menuOptions]
@@ -72,6 +77,10 @@ const Menu: React.FC<IMenu> = ({
       }
     }
   }
+
+  useEffect(() => {
+    dispatcher({ type: actionType, newState: active.filter(a => a !== "All") })
+  }, [active])
 
   const refButton = useRef<HTMLButtonElement | null>(null)
 
