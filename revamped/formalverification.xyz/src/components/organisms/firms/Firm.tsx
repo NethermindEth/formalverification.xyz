@@ -17,13 +17,20 @@ type IFirm = {
 const Firm:React.FC<IFirm> = ({ firm }) => {
 	const [isOpen, setIsOpen] = useState(true)
 	return (
-		<Box className='firm-root'>
-			<Grid columns={"60px 1fr 100px"} px={"4"} py={"4"}>
-				<Flex>
+		<Box className='firm-root' pt={{ initial: "0", sm: "1" }}>
+			<Grid columns={{ initial: "1fr", sm: "60px 1fr 100px" }} rows={{ initial: "60px 1fr 25px", sm: "1fr"}} gap={{ initial: "2", sm: "0"}} px={"4"} py={"4"}>
+				<Flex gap={{ initial: '2'}}>
 					<Avatar variant='soft' size={"4"} radius='full' src={`firms_logos/${firm.png}`} fallback={"F"} />
+					<Flex display={{ initial: 'flex', sm: 'none'}} gap={{ initial: "1", sm: "3" }} align={{ initial: "start", sm: "center"}} direction={{initial: "column", sm: "row"}}>
+						<Heading size={"4"}>{firm.name}</Heading>
+						<Button variant={'outline'} size={"1"} radius='large'>
+							Website
+							<MdArrowOutward />
+						</Button>
+					</Flex>
 				</Flex>
 				<Flex direction="column" gap={"2"}>
-					<Flex gap={"3"} align={"center"}>
+					<Flex display={{ initial: 'none', sm: 'flex'}} gap={{ initial: "1", sm: "3" }} align={{ initial: "start", sm: "center"}} direction={{initial: "column", sm: "row"}}>
 						<Heading size={"4"}>{firm.name}</Heading>
 						<Button variant={'outline'} size={"1"} radius='large'>
 							Website
@@ -53,7 +60,11 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 					display: isOpen ? 'flex' : 'none'
 				}}
 				>
-				<Grid width={"100%"} columns={"1fr 1px 1fr"}>
+				<Grid 
+					width={"100%"} 
+					columns={{ initial: "1fr", sm: "1fr 1px 1fr" }}
+					rows={{ initial: "1fr 1px 1fr", sm: "1fr" }}
+				>
 					<Flex direction={"column"} gap={"3"} p={"4"}>
 						<Flex align={"center"} gap={"2"}>
 							<MdElectricBolt />
@@ -66,7 +77,10 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 								</Badge>
 						})}</Flex>
 					</Flex>
-					<Separator size={"4"} orientation={"vertical"} />
+					<Separator 
+						size={"4"} 
+						orientation={{ initial: "horizontal", sm: "vertical"}} 
+					/>
 					<Flex direction={"column"} gap={"3"} p={"4"}>
 						<Flex align={"center"} gap={"2"}>
 							<IoShieldSharp />
@@ -81,7 +95,11 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 					</Flex>
 				</Grid>
 				<Separator size={"4"} />
-				<Grid width={"100%"} columns={"1fr 1px 1fr"}>
+				<Grid 
+					width={"100%"} 
+					columns={{ initial: "1fr", sm: "1fr 1px 1fr" }}
+					rows={{ initial: "1fr 1px 1fr", sm: "1fr" }}
+				>
 					<Flex direction={"column"} gap={"3"} p={"4"}>
 						<Flex align={"center"} gap={"2"}>
 							<BsStack />
@@ -94,7 +112,10 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 								</Badge>
 						})}</Flex>
 					</Flex>
-					<Separator size={"4"} orientation={"vertical"} />
+					<Separator 
+						size={"4"} 
+						orientation={{ initial: "horizontal", sm: "vertical"}} 
+					/>
 					<Flex direction={"column"} gap={"3"} p={"4"}>
 						<Flex align={"center"} gap={"2"}>
 							<HiCodeBracketSquare />

@@ -1,0 +1,23 @@
+.collapse-root {
+	box-shadow: var(--shadow-3);
+	background: var(--accent-contrast);
+	border-radius: var(--radius-3);
+	overflow: hidden;
+}
+
+.collapse-details-root {
+	transition: all 0.3s ease;
+}
+
+.collapse-root {
+	border: 1px solid transparent;
+	transition: all 0.2s ease;
+}
+
+.collapse-root:hover {
+	border: 1px solid var(--active-color);
+}
+
+.about-faq-heading {
+	padding-bottom: var(--radius-6);
+}

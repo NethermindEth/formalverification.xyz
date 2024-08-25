@@ -47,8 +47,16 @@ const Firms = () => {
 
 	return (
 		<Flex direction={"column"} gap={"4"} pb={"9"}>	
-			<Heading size={"6"} align={"center"}>Choose the firm that meets your needs!</Heading>
-			<Flex justify={"between"} align={"stretch"}>
+			<Heading size={{ initial: "5", sm: "6" }} align={"center"}>Choose the firm that meets your needs!</Heading>
+			<Flex 
+				direction={{
+					initial: "column", 
+					sm: "row"
+				}} 
+				gap={{initial: "3", sm: "0"}}
+				justify={"between"} 
+				align={"stretch"}
+			>
 				<Menu 
 					options={speciality.options} 
 					dispatcher={dispatchFilter} 
@@ -74,12 +82,12 @@ const Firms = () => {
 					actionType='LANGUAGES'
 				/>
 			</Flex>
-			<Flex py={"4"} gap={"5"} direction={"column"}>
+			<Flex py={"4"} px={{ initial: "2", sm: "0" }} gap={{ initial: "3", sm: "5" }} direction={"column"}>
 				{ 
 					filteredFirms?.length > 0 
 						? <>
-							<Flex px={"4"}>
-							<Text>{filteredFirms.length} FIRMS FOUND</Text>
+							<Flex px={"2"}>
+								<Text>{filteredFirms.length} FIRMS FOUND</Text>
 							</Flex>
 							{ 
 								filteredFirms.map((firm) => {
@@ -87,7 +95,7 @@ const Firms = () => {
 								})
 							}
 						</> 
-						: <Flex direction={"column"} align={"center"} gap={"2"} justify={"center"} p={"9"} className='no-firm-wrapper'>
+						: <Flex direction={"column"} align={"center"} gap={"2"} justify={"center"} px={{ initial: "2", sm: "9" }} py={{ initial: "7", sm: "9" }} className='no-firm-wrapper'>
 							<img src='exclaimation.svg' alt='exclaimation' />
 							<Text align={"center"}>
 								No firms found with the selected filters.

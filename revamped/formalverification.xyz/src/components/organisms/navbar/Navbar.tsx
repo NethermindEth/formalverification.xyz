@@ -16,7 +16,7 @@ const Navbar = () => {
 	 
 	return (
 		<Flex direction='column'>
-			<Flex px={"120px"} justify={"between"} align={"center"}>
+			<Flex px={{ initial: "2", sm: "120px"}} justify={"between"} align={"center"}>
 				<Heading size={"3"} weight={"bold"}>FORMAL VERIFICATION</Heading>	
 				<Flex>
 					<TabButton 

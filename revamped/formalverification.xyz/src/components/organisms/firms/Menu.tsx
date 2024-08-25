@@ -104,7 +104,7 @@ const Menu: React.FC<IMenu> = ({
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger className='menu-dropdown-trigger'>
-	<Flex direction={"column"} gap={"2"}>
+	<Flex direction={"column"} gap={{ initial: "1", sm: "2" }}>
 	  <Text size={"2"} style={{letterSpacing: "1px"}}>{label?.toUpperCase()}</Text>
 	  <Button 
 	    variant="outline" 
