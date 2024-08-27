@@ -36,12 +36,16 @@ const Home = () => {
 	}, [navState])
 	return (
 		<div className='home-root'>
-			<Navbar />
-			<Container>
-				<Hero {...HERO_CONTENT[navState]} />
-				{content}	
-			</Container>
-			<Footer />
+			<div className='home-overlay-bg-1'>
+				<div className='home-overlay-bg-2'>
+					<Navbar />
+					<Container>
+					<Hero {...HERO_CONTENT[navState]} />
+						{content}	
+					</Container>
+					<Footer />
+				</div>
+			</div>
 		</div>
 	)
 }

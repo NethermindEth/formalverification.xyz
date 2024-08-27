@@ -8,9 +8,25 @@
 
 .tabButton-text {
 	display: block;
-	padding: 50px 20px;
 }
 
 .tabButton-separator {
 	transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	.rt-Separator:where(.rt-r-orientation-vertical) {
+		width: 4px !important;
+		height: auto !important;
+	}
+
+	.tabButton-separator:where(.sm\:rt-r-orientation-horizontal) {
+		height: var(--separator-size) !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.tabButton-separator:where(.sm\:rt-r-orientation-horizontal) {
+		height: 2px !important;
+	}
 }

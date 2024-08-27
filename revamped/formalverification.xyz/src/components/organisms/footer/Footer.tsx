@@ -12,7 +12,12 @@ const Footer = () => {
 	<Text>
 	  Is your company missing or incorrect? 
 	</Text>
-	<Link>Add or update via PR</Link>
+	<Link
+	    href='https://github.com/NethermindEth/formalverification.xyz/tree/master/src/data'
+	    target='_blank'
+	>
+	    Add or update via PR
+	</Link>
       </Flex>
       </Container>
       <Separator size={"4"} />
@@ -24,13 +29,13 @@ const Footer = () => {
 	    <img className='footer-powered-by' src='powered_by.svg' alt='powered_by' />
 	  </Flex>
 	  <Flex gap={"5"}>
-	    <Link>
+	    <Link href='https://twitter.com/nethermindeth' target='_blank'>
 	      <Flex justify={"center"} align={"center"} gap={"2"}>
 		<Text> Follow us  </Text>
 		<FaXTwitter />
 	      </Flex>
 	    </Link>
-	    <Link>
+	    <Link href='https://discord.com/invite/PaCMRFdvWT' target='_blank'>
 	      <Flex justify={"center"} align={"center"} gap={"2"}>
 		<Text> Join us  </Text>
 		<FaDiscord size={"20"}/>

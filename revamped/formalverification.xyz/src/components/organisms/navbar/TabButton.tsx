@@ -2,6 +2,7 @@ import { Flex, FlexProps, Separator, Text } from '@radix-ui/themes'
 import React, { useEffect, useMemo, useState } from 'react'
 
 import './tabButton.css';
+import { useMobile } from '../../../hooks/useMobile';
 
 type ITabButtonProps = {
 	children: React.ReactNode,
@@ -14,36 +15,24 @@ const TabButton: React.FC<ITabButtonProps> = ({
 	...props
 }) => {
 
-	const [deviceWidth, setDeviceWidth] = useState<number>(0)
-
-	useEffect(() => {
-		if(window) {
-			setDeviceWidth(window?.innerWidth);
-		}
-	}, [])
-
-	useEffect(() => {
-		window.addEventListener('resize', () => {
-			if(window) {
-				setDeviceWidth(window.innerWidth);
-			}
-		})
-		return window.removeEventListener('resize', () => {})
-	}, [setDeviceWidth])
-
-
-	const isMobile = useMemo(() => {
-		return deviceWidth < 768
-	}, [deviceWidth])
+	const [ isMobile ] = useMobile();
 
 	return (
 		<Flex 
 			{...props} 
 			className='tabButton-root' 
 			direction={{ initial: "row-reverse", sm: "column"}}
+			gap={{initial: "2", sm: "0"}}
 			justify={"end"}
 		>
-			<Text className='tabButton-text'>{children}</Text>
+			<Text 
+				className='tabButton-text'
+				style={{ 
+					padding: isMobile ? "15px 10px" : "50px 20px"
+				}}
+			>
+				{children}
+			</Text>
 			<Separator 
 				size={"4"} 
 				orientation={{ initial: "vertical", sm: "horizontal"}} 

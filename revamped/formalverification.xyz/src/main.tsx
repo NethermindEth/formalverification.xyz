@@ -15,7 +15,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Theme>
+    <Theme accentColor='blue'>
       <App />
     </Theme>
   </StrictMode>,

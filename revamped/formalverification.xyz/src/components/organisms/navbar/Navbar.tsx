@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdArrowOutward } from "react-icons/md";
 import { Button, Flex, Grid, Heading, Link, Separator } from '@radix-ui/themes';
 
@@ -8,6 +8,7 @@ import { useAtom } from 'jotai';
 import { navbarStateAtom, NavState } from '../../../states/navbar-atom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
+import { useMobile } from '../../../hooks/useMobile';
 
 const Navbar = () => {
 	const [navStateAtom, setNavStateAtom] = useAtom(navbarStateAtom)
@@ -17,6 +18,18 @@ const Navbar = () => {
 	}
 
 	const [isOpen, setIsOpen] = useState(false)
+
+	const [isMobile] = useMobile()
+
+	useEffect(() => {
+		if(!isMobile) {
+			setIsOpen(false)
+		}
+	}, [isMobile])
+
+	const closeMobileNav = () => {
+		setIsOpen(false)
+	}
 	 
 	return (
 		<Flex direction='column' overflow={"hidden"}>
@@ -25,19 +38,30 @@ const Navbar = () => {
 				<Flex display={{ initial: 'none', sm: 'flex'}}>
 					<TabButton 
 						isActive={navStateAtom === 'firms'}
-						onClick={() => handleNavbar(NavState.Firms)}
+						onClick={() => { 
+							handleNavbar(NavState.Firms) 
+							closeMobileNav()
+						}}
 					>
 						Firms
 					</TabButton>
 					<TabButton 
 						isActive={navStateAtom === 'about'}
-						onClick={() => handleNavbar(NavState.About)}
+						onClick={() => { 
+							handleNavbar(NavState.About) 
+							closeMobileNav()
+						}}
 					>
 						About
 					</TabButton>
 				</Flex>
 				<Flex display={{ initial: 'none', sm: 'flex'}}> 
-					<Link size={"3"} className='navbar-link'>
+					<Link 
+						size={"3"} 
+						className='navbar-link'
+						href='https://github.com/NethermindEth/formalverification.xyz/tree/master/src/data'
+						target='_blank'
+					>
 						Add/Update Firm Info
 						<MdArrowOutward />
 					</Link>
@@ -65,16 +89,22 @@ const Navbar = () => {
 						</Button>
 					</Flex>
 					<Separator size={"4"} />
-					<Flex display={'flex'} direction={"column"}>
+					<Flex display={'flex'} direction={"column"} gap={"2"} pt={"5"}>
 						<TabButton 
 							isActive={navStateAtom === 'firms'}
-						onClick={() => handleNavbar(NavState.Firms)}
+							onClick={() => { 
+								handleNavbar(NavState.Firms) 
+								closeMobileNav()
+							}}
 							>
 							Firms
 						</TabButton>
 						<TabButton 
 							isActive={navStateAtom === 'about'}
-						onClick={() => handleNavbar(NavState.About)}
+							onClick={() => { 
+								handleNavbar(NavState.About) 
+								closeMobileNav()
+							}}
 							>
 							About
 						</TabButton>
@@ -86,7 +116,12 @@ const Navbar = () => {
 						px={{ initial: "3"}} 
 						py={{ initial: "5" }}
 					>
-						<Link size={"3"} className='navbar-link'>
+						<Link 
+							size={"3"} 
+							className='navbar-link' 
+							href='https://github.com/NethermindEth/formalverification.xyz/tree/master/src/data'
+							target='_blank'
+						>
 							Add/Update Firm Info
 							<MdArrowOutward />
 						</Link>

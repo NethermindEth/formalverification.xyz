@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Firm as FirmData } from '../../../data/firms'
-import { Avatar, Badge, Box, Button, Card, Flex, Grid, Heading, Separator, Text } from '@radix-ui/themes'
+import { Avatar, Badge, Box, Button, Card, Flex, Grid, Heading, Link, Separator, Text } from '@radix-ui/themes'
 import { MdArrowOutward } from 'react-icons/md'
 import { GrFormAdd, GrFormSubtract } from 'react-icons/gr'
 import { MdElectricBolt } from "react-icons/md";
@@ -32,10 +32,16 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 				<Flex direction="column" gap={"2"}>
 					<Flex display={{ initial: 'none', sm: 'flex'}} gap={{ initial: "1", sm: "3" }} align={{ initial: "start", sm: "center"}} direction={{initial: "column", sm: "row"}}>
 						<Heading size={"4"}>{firm.name}</Heading>
-						<Button variant={'outline'} size={"1"} radius='large'>
-							Website
-							<MdArrowOutward />
-						</Button>
+						<Link href={firm.link} target='_blank'>
+							<Button 
+								variant={'outline'} 
+								size={"1"} 
+								radius='large'
+								>
+								Website
+								<MdArrowOutward />
+							</Button>
+						</Link>
 					</Flex>
 					<Text>{firm.description}</Text>
 				</Flex>
