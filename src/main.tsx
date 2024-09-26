@@ -1,13 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
+import { Theme } from '@radix-ui/themes';
+
+// Import Fonts
+import '@fontsource/dm-sans';
+import '@fontsource/merriweather-sans';
+
+// Radix UI Imports
+import '@radix-ui/themes/styles.css';
+
+//  Initial CSS
 import './index.css'
-import reportWebVitals from './reportWebVitals.ts'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <Theme accentColor='blue'>
+      <App />
+    </Theme>
+  </StrictMode>,
 )
-
-reportWebVitals()

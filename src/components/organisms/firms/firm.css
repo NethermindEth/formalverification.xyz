@@ -1,0 +1,11 @@
+.firm-root {
+	box-shadow: var(--shadow-3);
+	background: #FFFFFF;
+	border-radius: var(--radius-6);
+	overflow: hidden;
+}
+
+.firm-details-root {
+	transition: all 0.3s ease;
+	background: #FBFCFF;
+}
