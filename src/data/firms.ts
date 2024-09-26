@@ -139,5 +139,16 @@ export const firms: Firm[] = [
       "fv_language": [FVTools.Coq],
       "svg": "formalland.svg",
       "link": "https://formal.land/"
+    },
+    {
+      "id": 9,
+      "name": "Lindy Labs",
+      "specialties": [Speciality.SmartContractVerification],
+      "description": "Lindy Labs offers bespoke formal verification for DeFi projects running on Starknet. We can prove your code matches what you claim to implement in your whitepaper!",
+      "languages": [Language.Cairo],
+      "stacks": [Stack.Starknet],
+      "fv_language": [FVTools.Lean4],
+      "svg": "lindylabs.svg",
+      "link": "https://www.lindylabs.net/"
     }
   ];
