@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp CNAME ./dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "build:deploy": "pnpm build && pnpm run deploy",
