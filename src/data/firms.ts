@@ -186,4 +186,15 @@ export const firms: Firm[] = [
       "svg": "galois.svg",
       "link": "https://galois.com/project/blockchain-roundup/"
     }
+    {
+      "id": 12,
+      "name": "zkSecurity",
+      "specialties": [Speciality.ZKCircuitVerification],
+      "description": "zkSecurity are experts in zero-knowledge proofs and cryptography in general. They perform audits, development work, due diligence, research, etc.",
+      "languages": [Language.C, Language.Java, Language.Cryptol],
+      "stacks": [Stack.Ethereum, Stack.Starknet],
+      "fv_language": [FVTools.Lean4],
+      "svg": "galois.svg",
+      "link": "https://galois.com/project/blockchain-roundup/"
+    }
   ];
