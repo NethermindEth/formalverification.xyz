@@ -24,7 +24,9 @@ export enum Stack {
   TON = "TON",
   zkWasm = "zkWasm",
   Stellar = "Stellar",
-  Cardano = "Cardano"
+  Cardano = "Cardano",
+  Polkadot = "Polkadot",
+  MultiversX = "MultiversX"
 }
 
 export enum FVTools {
@@ -71,7 +73,10 @@ export enum Language {
   TypeScript = "TypeScript",
   Java = "Java",
   C = "C",
-  Cryptol = "Cryptol"
+  Cryptol = "Cryptol",
+  Soroban = "Soroban",
+  TEAL = "TEAL",
+  Go = "Go"
 }
 
 
@@ -90,11 +95,11 @@ export const firms: Firm[] = [
     {
       "id": 3,
       "name": "Runtime Verification",
-      "specialties": [Speciality.SmartContractVerification, Speciality.VirtualMachineVerification],
-      "description": "Focused on runtime verification techniques, they provide thorough smart contract verification, analysis, and advisory services for blockchain technologies.",
-      "languages": [Language.Solidity, Language.Vyper, Language.Haskell],
-      "stacks": [Stack.Ethereum, Stack.Tezos, Stack.Algorand],
-      "fv_language": [FVTools.KFramework, FVTools.Coq],
+      "specialties": [Speciality.SmartContractVerification, Speciality.DeFiProtocolVerification, Speciality.VirtualMachineVerification, Speciality.ConsensusProtocolVerification],
+      "description": "Focused on formal verification techniques, they provide comprehensive smart contract verification, fuzz testing, security auditing, and advisory services for various blockchain ecosystems, while also developing high-quality open-source security tools.",
+      "languages": [Language.Solidity, Language.Vyper, Language.Rust, Language.Soroban, Language.Haskell, Language.TEAL, Language.PyTeal, Language.Go],
+      "stacks": [Stack.Ethereum, Stack.Stellar, Stack.Polkadot, Stack.MultiversX, Stack.Cosmos, Stack.Tezos, Stack.Algorand],
+      "fv_language": [FVTools.KFramework, FVTools.Z3, FVTools.Lean4, FVTools.Coq],
       "svg": "runtime.svg",
       "link": "https://runtimeverification.com"
     },
