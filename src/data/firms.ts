@@ -18,7 +18,15 @@ export enum Stack {
   Algorand = "Algorand",
   Polygon = "Polygon",
   Starknet = "Starknet",
-  AlephZero = "Aleph Zero"
+  AlephZero = "Aleph Zero",
+  Zcash = "Zcash",
+  Cosmos = "Cosmos",
+  TON = "TON",
+  zkWasm = "zkWasm",
+  Stellar = "Stellar",
+  Cardano = "Cardano",
+  Polkadot = "Polkadot",
+  MultiversX = "MultiversX"
 }
 
 export enum FVTools {
@@ -31,7 +39,11 @@ export enum FVTools {
   IsabelleHOL = "Isabelle/HOL",
   Lean4 = "Lean 4",
   CVC5 = "CVC5",
-  EasyCrypt = "EasyCrypt"
+  EasyCrypt = "EasyCrypt",
+  ACL2 = "ACL2",
+  Dafny = "Dafny",
+  Quint = "Quint",
+  SAW = "SAW"
 }
 
 export enum Speciality {
@@ -58,7 +70,13 @@ export enum Language {
   Cairo = "Cairo",
   PyTeal = "PyTeal",
   OCaml = "OCaml",
-  TypeScript = "TypeScript"
+  TypeScript = "TypeScript",
+  Java = "Java",
+  C = "C",
+  Cryptol = "Cryptol",
+  Soroban = "Soroban",
+  TEAL = "TEAL",
+  Go = "Go"
 }
 
 
@@ -70,20 +88,20 @@ export const firms: Firm[] = [
       "description": "As part of ConsenSys, Diligence offers advanced security services for Ethereum-based projects, including manual audits and automated analysis with tools like MythX.",
       "languages": [Language.Solidity],
       "stacks": [Stack.Ethereum],
-      "fv_language": [FVTools.HoareLogic],
+      "fv_language": [FVTools.HoareLogic, FVTools.Dafny],
       "svg": "consensys.svg",
-      "link": "https://consensys.net/diligence/"
+      "link": "https://consensys.net/diligence"
     },
     {
       "id": 3,
       "name": "Runtime Verification",
-      "specialties": [Speciality.SmartContractVerification, Speciality.VirtualMachineVerification],
-      "description": "Focused on runtime verification techniques, they provide thorough smart contract verification, analysis, and advisory services for blockchain technologies.",
-      "languages": [Language.Solidity, Language.Vyper, Language.Haskell],
-      "stacks": [Stack.Ethereum, Stack.Tezos, Stack.Algorand],
-      "fv_language": [FVTools.KFramework, FVTools.Coq],
+      "specialties": [Speciality.SmartContractVerification, Speciality.DeFiProtocolVerification, Speciality.VirtualMachineVerification, Speciality.ConsensusProtocolVerification],
+      "description": "Focused on formal verification techniques, they provide comprehensive smart contract verification, fuzz testing, security auditing, and advisory services for various blockchain ecosystems, while also developing high-quality open-source security tools.",
+      "languages": [Language.Solidity, Language.Vyper, Language.Rust, Language.Soroban, Language.Haskell, Language.TEAL, Language.PyTeal, Language.Go],
+      "stacks": [Stack.Ethereum, Stack.Stellar, Stack.Polkadot, Stack.MultiversX, Stack.Cosmos, Stack.Tezos, Stack.Algorand],
+      "fv_language": [FVTools.KFramework, FVTools.Z3, FVTools.Lean4, FVTools.Coq],
       "svg": "runtime.svg",
-      "link": "https://runtimeverification.com/"
+      "link": "https://runtimeverification.com"
     },
     {
       "id": 4,
@@ -94,7 +112,7 @@ export const firms: Firm[] = [
       "stacks": [Stack.Ethereum, Stack.Solana, Stack.Starknet],
       "fv_language": [FVTools.Coq, FVTools.Z3],
       "svg": "veridise.svg",
-      "link": "https://www.veridise.com/"
+      "link": "https://www.veridise.com"
     },
     {
       "id": 5,
@@ -105,7 +123,7 @@ export const firms: Firm[] = [
       "stacks": [Stack.Ethereum, Stack.BinanceSmartChain],
       "fv_language": [FVTools.Coq, FVTools.TLAPlus],
       "svg": "cyberscope.svg",
-      "link": "https://www.cyberscope.io/"
+      "link": "https://www.cyberscope.io"
     },
     {
       "id": 6,
@@ -116,7 +134,7 @@ export const firms: Firm[] = [
       "stacks": [Stack.Ethereum, Stack.Polygon, Stack.Algorand],
       "fv_language": [FVTools.IsabelleHOL, FVTools.TLAPlus],
       "svg": "shellboxes.svg",
-      "link": "https://www.shellboxes.com/"
+      "link": "https://www.shellboxes.com"
     },
     {
       "id": 7,
@@ -138,6 +156,50 @@ export const firms: Firm[] = [
       "stacks": [Stack.Ethereum, Stack.AlephZero, Stack.Tezos],
       "fv_language": [FVTools.Coq],
       "svg": "formalland.svg",
-      "link": "https://formal.land/"
+      "link": "https://formal.land"
+    }
+    {
+      "id": 9,
+      "name": "Kestrel",
+      "specialties": [Speciality.ZKCircuitVerification, Speciality.VirtualMachineVerification],
+      "description": "Kestrel's research spans formal methods, program synthesis and refinement, program analysis and verification, formal modeling and validation, theorem proving, and planning.",
+      "languages": [Language.Java],
+      "stacks": [Stack.Ethereum],
+      "fv_language": [FVTools.ACL2],
+      "svg": "kestrel.svg",
+      "link": "https://www.kestrel.edu"
+    }
+    {
+      "id": 10,
+      "name": "CertiK",
+      "specialties": [Speciality.ZKCircuitVerification, Speciality.VirtualMachineVerification, Speciality.SmartContractVerification],
+      "description": "CertiK provides provides a comprehensive suite of tools to secure the Web3 industry at scale.",
+      "languages": [],
+      "stacks": [Stack.Ethereum, Stack.Cosmos, Stack.zkWasm, Stack.TON],
+      "fv_language": [FVTools.Coq],
+      "svg": "certik.svg",
+      "link": "https://www.certik.com/products/formal-verification"
+    }
+    {
+      "id": 11,
+      "name": "Galois",
+      "specialties": [Speciality.CryptographicPrimitiveVerification, Speciality.ConsensusProtocolVerification, Speciality.SmartContractVerification],
+      "description": "CertiK provides provides a comprehensive suite of tools to secure the Web3 industry at scale.",
+      "languages": [Language.C, Language.Java, Language.Cryptol],
+      "stacks": [Stack.Ethereum, Stack.Stellar, Stack.Cardano],
+      "fv_language": [FVTools.Lean4, FVTools.SAW],
+      "svg": "galois.svg",
+      "link": "https://galois.com/project/blockchain-roundup/"
+    }
+    {
+      "id": 12,
+      "name": "zkSecurity",
+      "specialties": [Speciality.ZKCircuitVerification],
+      "description": "zkSecurity are experts in zero-knowledge proofs and cryptography in general. They perform audits, development work, due diligence, research, etc.",
+      "languages": [Language.C, Language.Java, Language.Cryptol],
+      "stacks": [Stack.Ethereum, Stack.Starknet],
+      "fv_language": [FVTools.Lean4],
+      "svg": "galois.svg",
+      "link": "https://galois.com/project/blockchain-roundup/"
     }
   ];
