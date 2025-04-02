@@ -157,7 +157,7 @@ export const firms: Firm[] = [
       "fv_language": [FVTools.Coq],
       "svg": "formalland.svg",
       "link": "https://formal.land"
-    }
+    },
     {
       "id": 9,
       "name": "Kestrel",
@@ -168,7 +168,7 @@ export const firms: Firm[] = [
       "fv_language": [FVTools.ACL2],
       "svg": "kestrel.svg",
       "link": "https://www.kestrel.edu"
-    }
+    },
     {
       "id": 10,
       "name": "CertiK",
@@ -179,7 +179,7 @@ export const firms: Firm[] = [
       "fv_language": [FVTools.Coq],
       "svg": "certik.svg",
       "link": "https://www.certik.com/products/formal-verification"
-    }
+    },
     {
       "id": 11,
       "name": "Galois",
@@ -190,16 +190,16 @@ export const firms: Firm[] = [
       "fv_language": [FVTools.Lean4, FVTools.SAW],
       "svg": "galois.svg",
       "link": "https://galois.com/project/blockchain-roundup/"
-    }
+    },
     {
       "id": 12,
       "name": "zkSecurity",
       "specialties": [Speciality.ZKCircuitVerification],
-      "description": "zkSecurity are experts in zero-knowledge proofs and cryptography in general. They perform audits, development work, due diligence, research, etc.",
-      "languages": [Language.C, Language.Java, Language.Cryptol],
-      "stacks": [Stack.Ethereum, Stack.Starknet],
+      "description": "zkSecurity is a team of experts in zero-knowledge proofs and cryptography in general. They perform security audits, development work, due diligence, research, etc.",
+      "languages": [Language.Rust, Language.Circom, Language.Solidity, Language.OCaml, Language.TypeScript, Language.Cairo, Language.Go, Language.C],
+      "stacks": [Stack.Ethereum, Stack.Starknet, Stack.Solana],
       "fv_language": [FVTools.Lean4],
-      "svg": "galois.svg",
-      "link": "https://galois.com/project/blockchain-roundup/"
+      "svg": "zksecurity.svg",
+      "link": "https://zksecurity.xyz"
     }
   ];
