@@ -37,6 +37,7 @@ export enum FVTools {
   Z3 = "Z3",
   TLAPlus = "TLA+",
   IsabelleHOL = "Isabelle/HOL",
+  HOL4 = "HOL4",
   Lean4 = "Lean 4",
   CVC5 = "CVC5",
   EasyCrypt = "EasyCrypt",
@@ -81,6 +82,17 @@ export enum Language {
 
 
 export const firms: Firm[] = [
+    {
+      "id": 1,
+      "name": "Verifereum",
+      "specialities": [Speciality.SmartContractVerification, Speciality.DefiProtocolVerification, Speciality.VirtualMachineVerification],
+      "description": "Free and open source project developing tools and methods for full formal verification of EVM applications in higher-order logic (using HOL4).",
+      "languages": [Language.Vyper, Language.Solidity],
+      "stacks": [Stack.Ethereum],
+      "fv_language": [FVTools.HOL4, FVTools.HoareLogic],
+      "svg": "verifereum.svg",
+      "link": "https://verifereum.org"
+    },
     {
       "id": 2,
       "name": "ConsenSys Diligence",
