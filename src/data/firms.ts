@@ -213,5 +213,16 @@ export const firms: Firm[] = [
       "fv_language": [FVTools.Lean4],
       "svg": "zksecurity.svg",
       "link": "https://zksecurity.xyz"
+    },
+    {
+      "id": 13,
+      "name": "Lindy Labs",
+      "specialties": [Speciality.SmartContractVerification],
+      "description": "Lindy Labs offers bespoke formal verification for DeFi projects running on Starknet or directly on Ethereum. We can prove your code matches what you claim to implement in your whitepaper!",
+      "languages": [Language.Cairo, Language.Solidity],
+      "stacks": [Stack.Starknet, Stack.Ethereum],
+      "fv_language": [FVTools.Lean4, FVTools.SMTSolvers],
+      "svg": "lindylabs.svg",
+      "link": "https://www.lindylabs.net/"
     }
   ];
