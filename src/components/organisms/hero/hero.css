@@ -1,0 +1,20 @@
+.hero-root {
+	text-align: center;
+}
+
+.hero-text-wrapper {
+	max-width: 810px;
+}
+
+.hero-text-title {
+	line-height: 76px;
+}
+
+.hero-text-subtitle {
+	line-height: 26px;
+}
+
+.hero-button {
+	color: var(--active-color);
+	border-color: #A7B2D2;
+}

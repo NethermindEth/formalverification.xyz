@@ -1,0 +1,20 @@
+.menu-dropdown-trigger {
+	width: 100%;
+	padding: 0rem 1rem;
+}
+
+.menu-dropdown-button {
+	display: grid !important;
+	width: 100%;
+	grid-template-columns: 20px 1fr 20px !important;
+	border-radius: 0.5rem !important;
+}
+
+
+.menu-trigger-button-text {
+	max-width: 300px;
+	text-align: left;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
