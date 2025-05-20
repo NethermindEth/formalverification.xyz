@@ -84,7 +84,7 @@ const Firm:React.FC<IFirm> = ({ firm }) => {
 							<Text size={"2"} style={{letterSpacing: "1px"}}>SPECIALITIES</Text>
 						</Flex>
 						<Flex gap={"2"} wrap={"wrap"}>
-							{firm.specialties.map((speciality, idx) => {
+							{firm.specialities.map((speciality, idx) => {
 								return <Badge size={"3"} color='sky' key={`${idx}-${speciality}`}>
 									{speciality}
 								</Badge>

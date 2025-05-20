@@ -37,7 +37,7 @@ const Firms = () => {
 
 	const filteredFirms = useMemo(() => {
 		return firms.filter(firm => {
-			const sState = filterState.SPECIALITIES.filter((speciality) => firm.specialties.includes(speciality))
+			const sState = filterState.SPECIALITIES.filter((speciality) => firm.specialities.includes(speciality))
 			const fState = filterState.FVTOOLS.filter((fvTool) => firm.fv_language.includes(fvTool))
 			const stackState = filterState.STACKS.filter((stack) => firm.stacks.includes(stack))
 			const lState = filterState.LANGUAGES.filter((language) => firm.languages.includes(language))
