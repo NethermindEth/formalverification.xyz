@@ -9,14 +9,15 @@ export const stack = z.enum([
  "Polygon",
  "Starknet",
  "Aleph Zero",
-  "Zcash",
-  "Cosmos",
-  "TON",
-  "zkWasm",
-  "Stellar",
-  "Cardano",
-  "Polkadot",
-  "MultiversX"
+ "Zcash",
+ "Cosmos",
+ "TON",
+ "zkWasm",
+ "Stellar",
+ "Cardano",
+ "Polkadot",
+ "MultiversX",
+ "Bitcoin",
 ])
 
 export type Stack = z.infer<typeof stack>;
@@ -123,14 +124,16 @@ export const language = z.enum([
  "Cairo",
  "PyTeal",
  "OCaml",
-  "TypeScript",
-  "Java",
-  "C",
-  "Cryptol",
-  "Soroban",
-  "TEAL",
-  "Go",
-  "Circom"
+ "TypeScript",
+ "Java",
+ "C",
+ "Cryptol",
+ "Soroban",
+ "TEAL",
+ "Go",
+ "Circom",
+ "Golang",
+ "CosmWasm",
 ])
 
 export type Language = z.infer<typeof language>
@@ -306,5 +309,17 @@ export const firms: Firm[] = [
       "svg": "lindylabs.svg",
       "png": "lindylabs.png",
       "link": "https://www.lindylabs.net/"
+    },
+    {
+      "id": 14,
+      "name": "Informal Systems",
+      "specialities": ["Smart Contract Verification", "Consensus Protocol Verification", "Cross-Chain Protocol Verification", "DeFi Protocol Verification"],
+      "description": "Informal Systems is a company specializing in end-to-end security solutions for complex software systems. From design and formal reasoning to expert security audits, we are involved in all phases of blockchain development.",
+      "languages": ["Rust", "Solidity", "Golang", "Cairo", "CosmWasm"],
+      "stacks": ["Cosmos", "Ethereum", "Bitcoin", "Starknet", "Polkadot"],
+      "fv_language": ["Quint", "TLA+"],
+      "svg": "informal-systems.svg",
+      "png": "informal-systems.png",
+      "link": "https://informal.systems"
     }
   ];
